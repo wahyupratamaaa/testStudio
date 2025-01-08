@@ -13,7 +13,7 @@ function App() {
       element: <Homepage />,
     },
     {
-      path: "/data",
+      path: "/Detail",
       element: <Detail />,
     },
   ]);
