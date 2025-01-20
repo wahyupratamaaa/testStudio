@@ -9,7 +9,7 @@ export default function Section() {
     setShowOverlay(true);
     setTimeout(() => {
       window.open("/Detail", "_blank");
-    }, 500); // Delay untuk memberi waktu overlay muncul
+    }, 500);
   };
 
   return (

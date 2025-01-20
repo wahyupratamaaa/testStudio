@@ -5,7 +5,7 @@ export default function Navbar() {
         <img src="/Vector.png" alt="logo" className="w-10 h-10" />
         <p className="font-bold">Tech Kini</p>
       </div>
-      {/* <div className="flex gap-5 font-semibold text-gray-500 cursor-pointer">
+      <div className="flex gap-5 font-semibold text-gray-500 cursor-pointer">
         <p>Beranda</p>
         <p>Terbaru</p>
         <p>Hiburan</p>
@@ -13,8 +13,7 @@ export default function Navbar() {
         <p>Olahraga</p>
         <p>Nasional</p>
         <p>Internasional</p>
-       
-      </div> */}
+      </div>
     </div>
   );
 }

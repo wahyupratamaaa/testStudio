@@ -3,21 +3,18 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { TbPointFilled } from "react-icons/tb";
 
-// Ubah nama variabel untuk fetch data dengan lebih spesifik
 const fetchTechArticles = async () => {
   const { data } = await axios.get(
     "https://api-berita-indonesia.vercel.app/cnbc/tech/"
   );
-  return data.data.posts.slice(10, 30); // Menampilkan 10 data pertama
+  return data.data.posts.slice(10, 30);
 };
 
-// Ubah nama fungsi getCategoryFromUrl
 const extractCategoryFromUrl = (url) => {
   const parts = url.split("/");
   return parts[parts.length - 2];
 };
 
-// Ubah nama fungsi formatDate
 const formatArticleDate = (dateString) => {
   const date = new Date(dateString);
   const options = {
@@ -30,13 +27,12 @@ const formatArticleDate = (dateString) => {
 };
 
 const TechNewsComponent = () => {
-  // Ubah query key menjadi lebih spesifik
   const {
     data: techArticles,
     isLoading,
     isError,
   } = useQuery({
-    queryKey: ["techArticlesData"], // Pastikan query key unik
+    queryKey: ["techArticlesData"],
     queryFn: fetchTechArticles,
   });
 
@@ -52,7 +48,7 @@ const TechNewsComponent = () => {
             Rekomendasi untuk Anda
           </span>
         </div>
-        {/* Grid untuk 4 kartu per baris */}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
           {techArticles?.map((item, index) => (
             <div
